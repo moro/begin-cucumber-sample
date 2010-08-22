@@ -6,4 +6,6 @@ ja:
     attributes:
       message:
         text: "テキスト"  #g
-
+  railties:
+    scaffold:
+      create: "作成"
