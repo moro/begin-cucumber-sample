@@ -1,0 +1,10 @@
+.DS_Store
+.*.sw*
+.*~
+*~
+
+tmp
+log/*.log
+
+# prefer cucumber or rspec for even if doing unit testing.
+test/*
