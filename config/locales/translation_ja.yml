@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    models:
+      message: "メッセージ"  #g
+
+    attributes:
+      message:
+        text: "テキスト"  #g
+
