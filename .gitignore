@@ -7,6 +7,8 @@ tmp
 log/*.log
 vendor/gems
 
+db/*.sqlite3
+
 # prefer cucumber or rspec for even if doing unit testing.
 test/*
 
