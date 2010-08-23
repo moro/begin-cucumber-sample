@@ -12,6 +12,8 @@ module NavigationHelpers
       '/'
     when "新規メッセージ"
       '/messages/new'
+    when "新規ユーザ登録"
+      '/users/new'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
