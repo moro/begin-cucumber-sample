@@ -2,10 +2,14 @@ ja:
   activerecord:
     models:
       message: "メッセージ"  #g
+      user:    "ユーザー"
 
     attributes:
       message:
         text: "テキスト"  #g
+      user:
+        login: "ログイン名"
+        email: "Eメール"
   railties:
     scaffold:
       create: "作成"

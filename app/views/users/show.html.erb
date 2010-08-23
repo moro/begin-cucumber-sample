@@ -1,0 +1,13 @@
+<p>
+  <b><%= User.human_attribute_name('login') %>:</b>
+  <%=h @user.login %>
+</p>
+
+<p>
+  <b><%= User.human_attribute_name('email') %>:</b>
+  <%=h @user.email %>
+</p>
+
+
+<%= link_to translate(:edit, :default => 'Edit', :scope => [:railties, :scaffold]), edit_user_path(@user) %> |
+<%= link_to translate(:back, :default => 'Back', :scope => [:railties, :scaffold]), users_path %>
