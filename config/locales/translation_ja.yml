@@ -16,3 +16,4 @@ ja:
 
   application:
     hello:    "こんにちは{{login}}さん"
+    login:    "ログイン"
