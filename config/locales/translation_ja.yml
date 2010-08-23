@@ -13,3 +13,6 @@ ja:
   railties:
     scaffold:
       create: "作成"
+
+  application:
+    hello:    "こんにちは{{login}}さん"

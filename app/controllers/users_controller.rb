@@ -44,6 +44,8 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        reset_session
+        self.current_user = @user
         flash[:notice] = I18n.t(:created_success, :default => '{{model}} was successfully created.', :model => User.human_name, :scope => [:railties, :scaffold])
         format.html { redirect_to(@user) }
         format.xml  { render :xml => @user, :status => :created, :location => @user }
