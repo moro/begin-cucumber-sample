@@ -16,6 +16,8 @@ module NavigationHelpers
       '/users/new'
     when 'ログイン'
       '/sessions/new'
+    when /\A([A-Za-z]+)のメッセージ一覧/
+      "/users/#{$1}/messages"
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
