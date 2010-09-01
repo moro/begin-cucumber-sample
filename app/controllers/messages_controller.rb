@@ -2,7 +2,13 @@ class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.xml
   def index
-    @messages = Message.all
+    @messages = if params[:user_id]
+        @user = User.find_by_login(params[:user_id])
+        raise ActiveRecord::RecordNotFound unless @user
+        @user.messages
+      else
+        Message.scoped({})
+      end
 
     respond_to do |format|
       format.html # index.html.erb
