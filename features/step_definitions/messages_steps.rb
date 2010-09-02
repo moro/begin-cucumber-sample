@@ -7,3 +7,7 @@
   end
 end
 
+ならば /^以下のメッセージが表示されていること:$/ do |expected|
+  expected.diff!(tableish("table tr.message", "td:first-child"))
+end
+

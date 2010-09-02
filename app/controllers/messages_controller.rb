@@ -9,6 +9,7 @@ class MessagesController < ApplicationController
       else
         Message.scoped({})
       end
+    @messages = @messages.descend
 
     respond_to do |format|
       format.html # index.html.erb

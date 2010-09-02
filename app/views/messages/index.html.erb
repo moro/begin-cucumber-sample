@@ -1,17 +1,11 @@
 <h1>Listing messages</h1>
 
 <table>
-  <tr>
-    <th>Text</th>
-  </tr>
-
 <% @messages.each do |message| %>
-  <tr>
+  <%- content_tag_for "tr", message do %>
     <td><%=h message.text %></td>
-    <td><%= link_to 'Show', message %></td>
-    <td><%= link_to 'Edit', edit_message_path(message) %></td>
-    <td><%= link_to 'Destroy', message, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    <td><%= link_to message.created_at.iso8601, message %></td>
+  <%- end %>
 <% end %>
 </table>
 
