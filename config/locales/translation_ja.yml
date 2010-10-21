@@ -19,3 +19,5 @@ ja:
     login:    "ログイン"
     watch:    "ウォッチする"
     watching:    "ウォッチ中"
+    unwatch:     "ウォッチをやめる"
+    not_watching: "ウォッチしていません"

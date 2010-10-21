@@ -16,3 +16,11 @@ end
   Then  %Q["ログイン"ボタンをクリックする]
 end
 
+前提 /^"([^"]*)"が"([^"]*)"をウォッチしている$/ do |watcher, watchee|
+  watcher = User.find_by_login(watcher)
+  watchee = User.find_by_login(watchee)
+  raise ActiveRecord::RecordNotFound unless (watcher && watchee)
+
+  watcher.watchings.create!(:watchee => watchee)
+end
+

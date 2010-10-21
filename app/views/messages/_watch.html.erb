@@ -1,8 +1,16 @@
+<% with_options(:scope => [:application]) do |i18n_app| -%>
+
 <% if current_user.watches?(@user) %>
-  <%= t('watching', :scope => [:application], :default => 'Watching') %>
+  <%= i18n_app.t('watching', :default => 'Watching') %>
+  <% form_for current_user.watchings.for(@user), :html => {:method => :delete} do |f| %>
+    <%= submit_tag i18n_app.t('unwatch', :default => 'Unwatch') %>
+  <% end %>
 <% else %>
+  <%= i18n_app.t('not_watching', :default => 'Not watching.') %>
   <% form_for current_user.watchings.build(:watchee => @user) do |f| %>
     <%= f.hidden_field :watchee_id %>
-    <%= submit_tag t('watch', :scope => [:application], :default => 'Watch') %>
+    <%= submit_tag i18n_app.t('watch', :default => 'Watch') %>
   <% end %>
+<% end %>
+
 <% end %>
