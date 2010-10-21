@@ -1,5 +1,9 @@
 <h1>Listing messages</h1>
 
+<% if @user && signed_in? && @user != current_user %>
+  <%= render :partial => 'watch' %>
+<% end %>
+
 <table>
 <% @messages.each do |message| %>
   <%- content_tag_for "tr", message do %>

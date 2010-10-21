@@ -1,0 +1,8 @@
+<% if current_user.watches?(@user) %>
+  <%= t('watching', :scope => [:application], :default => 'Watching') %>
+<% else %>
+  <% form_for current_user.watchings.build(:watchee => @user) do |f| %>
+    <%= f.hidden_field :watchee_id %>
+    <%= submit_tag t('watch', :scope => [:application], :default => 'Watch') %>
+  <% end %>
+<% end %>

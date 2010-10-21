@@ -17,3 +17,5 @@ ja:
   application:
     hello:    "こんにちは{{login}}さん"
     login:    "ログイン"
+    watch:    "ウォッチする"
+    watching:    "ウォッチ中"

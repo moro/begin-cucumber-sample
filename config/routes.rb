@@ -1,8 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.root :controller => 'messages', :action => 'index'
   map.resources :users do |users|
     users.resources :messages
   end
 
+  map.resources :watchings
   map.resources :messages
 
   map.resources :sessions

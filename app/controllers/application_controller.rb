@@ -35,4 +35,8 @@ class ApplicationController < ActionController::Base
       I18n.locale = locale
     end
   end
+
+  def authenticate
+    redirect_to :root unless signed_in?
+  end
 end
