@@ -1,4 +1,6 @@
 class MessagesController < ApplicationController
+  before_filter :authenticate, :only => %w[new create]
+
   # GET /messages
   # GET /messages.xml
   def index

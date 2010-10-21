@@ -59,3 +59,8 @@ end
 Before do
   When %q[言語は"ja-JP"]
 end
+
+Before('@login_as_alice') do
+  Given %Q[ログイン名が"alice"、メアドが"alice@example.com"のユーザがいる]
+  And   %Q["alice"としてログインしている]
+end
