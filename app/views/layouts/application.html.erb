@@ -12,6 +12,7 @@
   <div id="header">
     <% if signed_in? %>
       <%=h t(:hello, :default => "Hello %{login}", :login => current_user.login, :scope => [:application]) %>
+      <%= link_to 'Home', home_messages_path %>
     <% end %>
   </div>
 

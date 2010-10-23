@@ -1,5 +1,10 @@
 class MessagesController < ApplicationController
-  before_filter :authenticate, :only => %w[new create]
+  before_filter :authenticate, :only => %w[new create home]
+
+  def home
+    @messages = Message.watched_by(current_user).descend
+    render(:action => :index)
+  end
 
   # GET /messages
   # GET /messages.xml

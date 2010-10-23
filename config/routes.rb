@@ -5,7 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.resources :watchings
-  map.resources :messages
+  map.resources :messages, :collection => {:home => :get}
 
   map.resources :sessions
   # The priority is based upon order of creation: first created -> highest priority.
