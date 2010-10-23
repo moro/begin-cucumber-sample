@@ -46,7 +46,7 @@ class UsersController < ApplicationController
       if @user.save
         reset_session
         self.current_user = @user
-        flash[:notice] = I18n.t(:created_success, :default => '{{model}} was successfully created.', :model => User.human_name, :scope => [:railties, :scaffold])
+        flash[:notice] = I18n.t(:created_success, :default => '%{model} was successfully created.', :model => User.human_name, :scope => [:railties, :scaffold])
         format.html { redirect_to(@user) }
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
@@ -63,7 +63,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        flash[:notice] = I18n.t(:updated_success, :default => '{{model}} was successfully updated.', :model => User.human_name, :scope => [:railties, :scaffold])
+        flash[:notice] = I18n.t(:updated_success, :default => '%{model} was successfully updated.', :model => User.human_name, :scope => [:railties, :scaffold])
         format.html { redirect_to(@user) }
         format.xml  { head :ok }
       else

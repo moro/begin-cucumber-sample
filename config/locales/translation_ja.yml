@@ -15,7 +15,7 @@ ja:
       create: "作成"
 
   application:
-    hello:    "こんにちは{{login}}さん"
+    hello:    "こんにちは%{login}さん"
     login:    "ログイン"
     watch:    "ウォッチする"
     watching:    "ウォッチ中"
