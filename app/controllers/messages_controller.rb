@@ -49,11 +49,11 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.xml
   def create
-    @message = Message.new(params[:message])
+    @message = current_user.messages.build(params[:message])
 
     respond_to do |format|
       if @message.save
-        format.html { redirect_to(@message, :notice => 'Message was successfully created.') }
+        format.html { redirect_to(user_messages_url(current_user.login), :notice => 'Message was successfully created.') }
         format.xml  { render :xml => @message, :status => :created, :location => @message }
       else
         format.html { render :action => "new" }

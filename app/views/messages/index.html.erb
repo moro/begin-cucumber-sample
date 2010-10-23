@@ -7,6 +7,7 @@
 <table>
 <% @messages.each do |message| %>
   <%- content_tag_for "tr", message do %>
+    <td><%=h message.user.login %></td>
     <td><%=h message.text %></td>
     <td><%= link_to message.created_at.iso8601, message %></td>
   <%- end %>

@@ -8,6 +8,6 @@
 end
 
 ならば /^以下のメッセージが表示されていること:$/ do |expected|
-  expected.diff!(tableish("table tr.message", "td:first-child"))
+  expected.diff!(tableish("table tr.message", "td:first-child, td:nth-child(2)"))
 end
 
