@@ -41,7 +41,8 @@
          | <1st_user>  | <1st_message> |
          | <2nd_user>  | <2nd_message> |
 
-    例:
+    サンプル:
       | watcher | watchee | 1st_user | 1st_message      | 2nd_user | 2nd_message  |
       | alice   | bob     | bob      | ランチどうする。 | alice    | 着席しています(大ホール)。 |
+      | alice   | charls  | charls   | もう食べたよ!?   | alice    | 着席しています(大ホール)。 |
 
