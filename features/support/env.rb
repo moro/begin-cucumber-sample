@@ -61,6 +61,6 @@ Before do
 end
 
 Before('@login_as_alice') do
-  Given %Q[ログイン名が"alice"、メアドが"alice@example.com"のユーザがいる]
+  Given %Q[ログイン名が"alice"、Eメールアドレスが"alice@example.com"のユーザがいる]
   And   %Q["alice"としてログインしている]
 end

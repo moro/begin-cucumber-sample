@@ -1,11 +1,11 @@
 
-前提 /^ログイン名が"([^"]*)"、メアドが"([^"]*)"のユーザがいる$/ do |login, email|
+前提 /^ログイン名が"([^"]*)"、Eメールアドレスが"([^"]*)"のユーザがいる$/ do |login, email|
   User.create!(:login => login, :email => email)
 end
 
 前提 /^以下のユーザがいる:$/ do |table|
   table.raw.each do |username|
-    When %Q[ログイン名が"#{username}"、メアドが"#{username}@example.com"のユーザがいる]
+    When %Q[ログイン名が"#{username}"、Eメールアドレスが"#{username}@example.com"のユーザがいる]
   end
 end
 
