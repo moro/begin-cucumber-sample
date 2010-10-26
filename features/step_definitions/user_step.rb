@@ -3,10 +3,15 @@
   User.create!(:login => login, :email => email)
 end
 
-前提 /^以下のユーザがいる:$/ do |table|
+前提 /^以下のユーザ(?:が|も)いる:$/ do |table|
   table.raw.each do |username|
     When %Q[ログイン名が"#{username}"、Eメールアドレスが"#{username}@example.com"のユーザがいる]
   end
+end
+
+前提 /^ユーザ"([^"]*)"がいて、ログインしている$/ do |username|
+  Given %Q[ログイン名が"#{username}"、Eメールアドレスが"#{username}@example.com"のユーザがいる]
+  Given %Q["#{username}"としてログインしている]
 end
 
 前提 /^"([^"]*)"としてログインしている$/ do |username|
