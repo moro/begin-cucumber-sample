@@ -7,7 +7,9 @@
 <table>
 <% @messages.each do |message| %>
   <%- content_tag_for "tr", message do %>
-    <td><%=h message.user.login %></td>
+    <td>
+      <%= link_to message.user.login, user_messages_path(message.user.login) %>
+    </td>
     <td><%=h message.text %></td>
     <td><%= link_to message.created_at.iso8601, message %></td>
   <%- end %>
@@ -16,4 +18,4 @@
 
 <br />
 
-<%= link_to 'New message', new_message_path %>
+<%= link_to t(:new_message, :default => 'New message', :scope => [:application]), new_message_path %>
