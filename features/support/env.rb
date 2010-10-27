@@ -60,3 +60,13 @@ Before do
   When %q[言語は"ja-JP"]
 end
 
+After('@golden_path') do |scenario|
+  if scenario.failed?
+    require 'shout-bot' unless defined? ShoutBot
+
+    msg = "golden path '%s' failed: %s" % [scenario.name, scenario.exception.message]
+    uri = 'irc://shoutbot@irc.example.local:6667/#project'
+    ShoutBot.shout(uri) {|c| c.say(msg) }
+  end
+end
+
