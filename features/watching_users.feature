@@ -67,7 +67,7 @@
       | bob     | charls  | いない        | いる        | いる           |
       | charls  | alice   | いる          | いない      | いる           |
 
-  @golden_path
+  @important
   シナリオ: メッセージを投稿し、他のユーザをウォッチし、全員のメッセージを閲覧する
     前提   以下のユーザもいる:
          | charls |
