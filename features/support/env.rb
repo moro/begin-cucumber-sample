@@ -60,7 +60,7 @@ Before do
   When %q[言語は"ja-JP"]
 end
 
-After('@golden_path') do |scenario|
+After('@important') do |scenario|
   if scenario.failed?
     require 'shout-bot' unless defined? ShoutBot
 
