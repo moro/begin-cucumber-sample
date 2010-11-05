@@ -1,4 +1,4 @@
-<h1><%= translate(:plz_login, :default => "Please login", :scope => [:application]) %></h1>
+<h1><%= t(:plz_login, :default => "Please login", :scope => [:application]) %></h1>
 
 <% form_tag(sessions_url) do %>
   <% with_options(:scope => [:activerecord, :attributes, :user]) do |i18n| %>
