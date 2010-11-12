@@ -1,0 +1,38 @@
+body {
+  background: #aaffaa; }
+
+div#header {
+  font-size: 10px;
+  text-align: right;
+  margin-right: 5em; }
+  div#header a {
+    margin-left: 0 5px; }
+
+div#main {
+  width: 90%;
+  margin: 1em 5%;
+  background: white; }
+  div#main h1 {
+    font-size: 12px;
+    font-family: "Gill Sans", serif;
+    margin: 20px; }
+  div#main > table {
+    margin: 0 auto;
+    width: 90%; }
+    div#main > table tr > td {
+      border-bottom: 1px solid silver; }
+    div#main > table tr > td:nth-child(1) {
+      font-size: 9px; }
+    div#main > table tr > td:nth-child(2) {
+      width: 60%; }
+    div#main > table tr > td:nth-child(3) {
+      font-size: 8px; }
+  div#main > a {
+    margin-left: 70%; }
+
+a, a:visited, a:hover {
+  color: #008800;
+  text-decoration: none; }
+
+a:hover {
+  background: palegreen; }
