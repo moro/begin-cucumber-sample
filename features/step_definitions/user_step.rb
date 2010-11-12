@@ -4,7 +4,8 @@
 end
 
 前提 /^以下のユーザ(?:が|も)いる:$/ do |table|
-  table.raw.each do |username|
+  table.raw.each do |row|
+    username = row.first
     When %Q[ログイン名が"#{username}"、Eメールアドレスが"#{username}@example.com"のユーザがいる]
   end
 end
