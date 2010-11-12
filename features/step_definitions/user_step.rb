@@ -1,3 +1,4 @@
+# coding:utf-8
 
 前提 /^ログイン名が"([^"]*)"、Eメールアドレスが"([^"]*)"のユーザがいる$/ do |login, email|
   User.create!(:login => login, :email => email)

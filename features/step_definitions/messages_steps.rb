@@ -1,3 +1,4 @@
+# coding:utf-8
 
 前提 /^以下のユーザごとのメッセージがある:$/ do |table|
   table.rows.each do |login, message_text, created_at|
