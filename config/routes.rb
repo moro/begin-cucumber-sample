@@ -1,4 +1,18 @@
 TinyMessageModern::Application.routes.draw do
+  root :controller => 'messages', :action => 'index'
+  resources :users do
+    resources :messages
+  end
+
+  resources :watchings
+  resources :messages do
+    collection do
+      get :home
+    end
+  end
+
+  resources :sessions
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
