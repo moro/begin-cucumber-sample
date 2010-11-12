@@ -2,6 +2,6 @@
 
 # Your secret key for verifying the integrity of signed cookies.
 # If you change this key, all old signed cookies will become invalid!
-# Make sure the secret is at least 30 characters and all random, 
+# Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-ActionController::Base.cookie_verifier_secret = '156801b780f5ef38e231d789743561a4abec50c33542e93ef355855eb11610a2c40c0a2c18dbcf9ebdac94efe9a2ca48f9f950e1039cff4d03442292c32a73d7';
+TinyMessageModern::Application.config.secret_token = '7ba37abc76f3d57dc8e1f45c5c45e479cd82aec1534d5d146acd8eb0ce6c0d3ab69fe7eea2b4e6d0de7d3edb93ebc865c4124ac354bb8fdca16a6c329e56d2c8'
