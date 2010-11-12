@@ -1,17 +1,16 @@
 <h1><%= t(:plz_login, :default => "Please login", :scope => [:application]) %></h1>
 
 <% form_tag(sessions_url) do %>
-  <% with_options(:scope => [:activerecord, :attributes, :user]) do |i18n| %>
+  <% i18n_scope = {:scope => [:activerecord, :attributes, :user]} %>
   <p>
-    <%= label_tag :login, i18n.t(:login)%><br />
+    <%= label_tag :login, t(:login, i18n_scope)%><br />
     <%= text_field_tag :login %>
   </p>
   <p>
-    <%= label_tag :email, i18n.t(:email) %><br />
+    <%= label_tag :email, t(:email, i18n_scope) %><br />
     <%= text_field_tag :email %>
   </p>
   <p>
-  <% end %>
     <%= submit_tag translate(:login, :default => "Login", :scope => [:application]) %>
   </p>
 <% end %>

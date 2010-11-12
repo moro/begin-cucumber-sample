@@ -3,7 +3,7 @@ class CreateWatchings < ActiveRecord::Migration
     create_table(:watchings) do |t|
       t.integer :watcher_id, :null => false
       t.integer :watchee_id, :null => false
-      t.timestamps!
+      t.timestamps
     end
   end
 

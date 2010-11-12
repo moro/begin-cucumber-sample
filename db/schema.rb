@@ -26,8 +26,10 @@ ActiveRecord::Schema.define(:version => 20101021004030) do
   end
 
   create_table "watchings", :force => true do |t|
-    t.integer "watcher_id", :null => false
-    t.integer "watchee_id", :null => false
+    t.integer  "watcher_id", :null => false
+    t.integer  "watchee_id", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
