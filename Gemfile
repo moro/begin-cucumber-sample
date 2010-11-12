@@ -10,6 +10,7 @@ gem 'racc'
 gem 'dynamic_form'
 
 group :development, :test do
+  gem 'rcov'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'cucumber-rails'
