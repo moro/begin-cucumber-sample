@@ -1,6 +1,6 @@
-<h1><%= translate(:new, :default => "New %{model}", :model => User.human_name, :scope => [:railties, :scaffold]) %></h1>
+<h1><%= translate(:new, :default => "New %{model}", :model => User.model_name.human, :scope => [:railties, :scaffold]) %></h1>
 
-<% form_for(@user) do |f| %>
+<%= form_for(@user) do |f| %>
   <%= f.error_messages %>
 
   <p>

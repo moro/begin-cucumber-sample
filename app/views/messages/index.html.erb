@@ -6,7 +6,7 @@
 
 <table>
 <% @messages.each do |message| %>
-  <%- content_tag_for "tr", message do %>
+  <%= content_tag_for "tr", message do %>
     <td>
       <%= link_to message.user.login, user_messages_path(message.user.login) %>
     </td>

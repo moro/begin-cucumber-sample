@@ -1,6 +1,6 @@
 <h1><%= t(:plz_login, :default => "Please login", :scope => [:application]) %></h1>
 
-<% form_tag(sessions_url) do %>
+<%= form_tag(sessions_url) do %>
   <% i18n_scope = {:scope => [:activerecord, :attributes, :user]} %>
   <p>
     <%= label_tag :login, t(:login, i18n_scope)%><br />
