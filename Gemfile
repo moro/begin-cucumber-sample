@@ -7,6 +7,7 @@ gem 'rails', '3.0.1'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'racc'
+gem 'dynamic_form'
 
 group :development, :test do
   gem 'capybara'
